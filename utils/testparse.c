@@ -173,9 +173,13 @@ static void print_preshader_operand(const MOJOSHADER_preshader *preshader,
         case MOJOSHADER_PRESHADEROPERAND_TEMP:
         {
             int idx = operand->index % 4;
-            char regch = 'c';
+            char regch;
             if (operand->type == MOJOSHADER_PRESHADEROPERAND_TEMP)
                 regch = 'r';
+            else if (operand->type == MOJOSHADER_PRESHADEROPERAND_INPUT)
+                regch = 'i';
+            else
+                regch = 'c';
 
             if (operand->array_register_count > 0)
             {
