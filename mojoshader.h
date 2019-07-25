@@ -3163,6 +3163,11 @@ DECLSPEC void MOJOSHADER_glSetVertexAttribDivisor(MOJOSHADER_usage usage,
  */
 DECLSPEC void MOJOSHADER_glProgramReady(void);
 
+// !!! FIXME: Document me.
+DECLSPEC void MOJOSHADER_glProgramViewportInfo(int viewportW, int viewportH,
+                                               int backbufferW, int backbufferH,
+                                               int renderTargetBound);
+
 #ifdef MOJOSHADER_FLIP_RENDERTARGET
 // !!! FIXME: Document me.
 DECLSPEC void MOJOSHADER_glProgramViewportFlip(int flip);
