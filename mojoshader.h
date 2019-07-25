@@ -3185,11 +3185,6 @@ DECLSPEC void MOJOSHADER_glProgramViewportInfo(int viewportW, int viewportH,
                                                int backbufferW, int backbufferH,
                                                int renderTargetBound);
 
-#ifdef MOJOSHADER_FLIP_RENDERTARGET
-// !!! FIXME: Document me.
-DECLSPEC void MOJOSHADER_glProgramViewportFlip(int flip);
-#endif
-
 /*
  * Free the resources of a linked program. This will delete the GL object
  *  and free memory.

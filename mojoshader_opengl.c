@@ -2658,29 +2658,6 @@ void MOJOSHADER_glDestroyContext(MOJOSHADER_glContext *_ctx)
 } // MOJOSHADER_glDestroyContext
 
 
-#ifdef MOJOSHADER_FLIP_RENDERTARGET
-
-
-void MOJOSHADER_glProgramViewportFlip(int flip)
-{
-    assert(ctx->bound_program->vs_flip_loc != -1);
-
-    /* Some compilers require that vpFlip be a float value, rather than int.
-     * However, there's no real reason for it to be a float in the API, so we
-     * do a cast in here. That's not so bad, right...?
-     * -flibit
-     */
-    if (flip != ctx->bound_program->current_flip)
-    {
-        ctx->glUniform1f(ctx->bound_program->vs_flip_loc, (float) flip);
-        ctx->bound_program->current_flip = flip;
-    } // if
-}
-
-
-#endif
-
-
 #ifdef MOJOSHADER_EFFECT_SUPPORT
 
 
