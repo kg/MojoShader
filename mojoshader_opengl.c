@@ -2564,9 +2564,9 @@ void MOJOSHADER_glProgramReady(void)
 } // MOJOSHADER_glProgramReady
 
 
-void MOJOSHADER_glViewportInfo(int viewportW, int viewportH,
-                               int backbufferW, int backbufferH,
-                               int renderTargetBound)
+void MOJOSHADER_glProgramViewportInfo(int viewportW, int viewportH,
+                                      int backbufferW, int backbufferH,
+                                      int renderTargetBound)
 {
     int vposFlip[2];
 
